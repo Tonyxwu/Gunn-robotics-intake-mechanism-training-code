@@ -19,12 +19,22 @@ public final class Constants {
 
   /** Constants for the intake subsystems. */
   public static class IntakeConstants {
+    //MOTOR IDs
+    public static final int INTEGRATION_MOTOR_ID = 19;
     public static final int PIVOT_MOTOR_ID = 16;
-    
+    public static final int FRONT_MOTOR_ID = 17;
+
+    //PID CONSTANTS FOR PIVOT
     public static final double PIVOT_P = 1; //old 2.5
     public static final double PIVOT_I = 0;
     public static final double PIVOT_D = 0;
     public static final double PIVOT_CONVERSION_FACTOR = 0.2142;
+    
+    //SENSOR IDs
+    public static final int FRONT_SENSOR_ID = 3;
+    public static final int AMP_SENSOR_ID = 5;
+    public static final int SHOOTER_SENSOR_ID = 4;
+    
 
 }
 }

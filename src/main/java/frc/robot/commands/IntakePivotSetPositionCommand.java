@@ -25,16 +25,19 @@ public class IntakePivotSetPositionCommand extends Command {
     @Override
     public void initialize() {
         pivotSubsystem.setPosition(position);
+        System.out.println("Intake Initialized");
     }
 
     @Override
     public void end(boolean interrupted) {
         pivotSubsystem.movePivot(0);
+        System.out.println("Intake End");
         
     }
 
     @Override
     public boolean isFinished() {
+        System.out.println("Intake Finished");
         return Math.abs(pivotSubsystem.getEncoderPosition() - position) < .1;
        
     }

@@ -1,6 +1,5 @@
 package frc.robot.subsystems;
 
-import static frc.robot.Constants.IntakeConstants;
 
 import com.ctre.phoenix6.configs.Slot0Configs;
 import com.ctre.phoenix6.configs.VoltageConfigs;
@@ -11,6 +10,7 @@ import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants.IntakeConstants;
 
 
 /** The subsystem for the pivot on the intake. */
@@ -69,10 +69,11 @@ public class IntakePivotSubsystem extends SubsystemBase {
      *
      * @param position The position to set the pivot to. 1 is fully extended, 0 is fully stowed.
      */
-
     public void setPosition(double position) {
         pivotMotor.setControl(request.withPosition(position / IntakeConstants.PIVOT_CONVERSION_FACTOR));
         setPos = position;
+        System.out.print(position);
+        System.out.println("Set Pos");
     }
 
     /**
